@@ -1,0 +1,81 @@
+/* src/components/ConstructionOverlay.module.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 12, 36, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(94, 230, 22, 0.2);
+    border: 1px solid rgba(94, 230, 22, 0.3);
+    max-width: 90%;
+    width: 500px;
+  }
+  
+  .image {
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #5ee616, #15b8a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "BeldgoRegular", sans-serif;
+  }
+  
+  .message {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(to right, #5ee616, #15b8a3);
+    color: #050c24;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .button:hover {
+    background: transparent;
+    color: #5ee616;
+    border-color: #5ee616;
+    box-shadow: 0 0 15px rgba(94, 230, 22, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .message {
+      font-size: 1rem;
+    }
+  }

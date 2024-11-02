@@ -1,0 +1,345 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.formContainer,
+.previewContainer {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(94, 230, 22, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(94, 230, 22, 0.1);
+  transition: all 0.3s ease;
+}
+
+.formContainer:hover,
+.previewContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(94, 230, 22, 0.3);
+  border-color: rgba(94, 230, 22, 0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "BeldgoRegular", sans-serif;
+}
+
+.inputGroup input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(94, 230, 22, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #5ee616;
+  box-shadow: 0 0 10px rgba(94, 230, 22, 0.5);
+}
+
+.switchContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #5ee616;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.switchLabel {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "BeldgoRegular", sans-serif;
+}
+
+.feeText {
+  color: #FFD700;  /* Yellow color */
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: -1rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.submitButton {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #5ee616, #15b8a3);
+  color: #050c24;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 6px rgba(94, 230, 22, 0.1);
+  font-family: "BeldgoRegular", sans-serif;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(94, 230, 22, 0.2);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.previewTitle {
+  color: #5ee616;
+  margin-bottom: 1rem;
+  font-family: "BeldgoRegular", sans-serif;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px rgba(94, 230, 22, 0.3);
+}
+
+.previewContent {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.previewContent h3 {
+  color: #5ee616;
+  margin-bottom: 1rem;
+  font-family: "BeldgoRegular", sans-serif;
+}
+
+.previewContent p {
+  margin-bottom: 0.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.detailsSection {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.detailsSection strong {
+  color: rgb(213, 228, 84);
+}
+
+.transactionHash {
+  word-break: break-all;
+}
+
+.downloadButton {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(45deg, #15b8a3, #5ee616);
+  color: #050c24;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(94, 230, 22, 0.3);
+}
+
+.previewPlaceholder {
+  color: #ffffff;
+  text-align: center;
+}
+
+.placeholderDetails {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.placeholderDetails p {
+  margin-bottom: 0.5rem;
+}
+
+.placeholderDetailsnorm {
+  font-family: sans-serif;
+}
+
+.placeholderDetails strong {
+  color: #5ee616;
+}
+
+.success {
+  border: 1px solid #5ee616;
+}
+
+.error {
+  border: 1px solid #ff4444;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.previewContent, .previewPlaceholder {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.transactionLink {
+  color: #5ee616;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.3s ease;
+}
+
+.transactionLink:hover {
+  color: #15b8a3;
+  text-decoration: underline;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.setupButton {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(45deg, #15b8a3, #5ee616);
+  color: #050c24;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.setupButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(94, 230, 22, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .formContainer,
+  .previewContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .formContainer,
+  .previewContainer {
+    padding: 1.5rem;
+  }
+
+  .previewTitle {
+    font-size: 1.5rem;
+  }
+
+  .submitButton {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .switchContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .switchLabel {
+    margin-top: 0.5rem;
+  }
+
+  .inputGroup label {
+    font-size: 0.9rem;
+  }
+
+  .inputGroup input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}

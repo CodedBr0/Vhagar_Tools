@@ -1,0 +1,285 @@
+/* src/components/LegacyTokenCreator.module.css */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .formContainer {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .formContainer input,
+  .formContainer select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .formContainer input:focus,
+  .formContainer select:focus {
+    outline: none;
+    border-color: #5ee616;
+    box-shadow: 0 0 10px rgba(94, 230, 22, 0.5);
+  }
+  
+  .switchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .labelText {
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switchSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2c3e50;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .switchSlider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .switchSlider {
+    background-color: #5ee616;
+  }
+  
+  input:checked + .switchSlider:before {
+    transform: translateX(26px);
+  }
+  
+  .switchSlider:hover {
+    box-shadow: 0 0 10px rgba(94, 230, 22, 0.5);
+  }
+  
+  .createButton {
+    background: linear-gradient(to right, #5ee616, #15b8a3);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .createButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(94, 230, 22, 0.4);
+  }
+  
+  .createButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(94, 230, 22, 0.4);
+  }
+  
+  .createButton:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .previewContainer,
+  .createdTokenContainer {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .previewContainer pre,
+  .createdTokenContainer pre {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: #5ee616;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .heading2 {
+    color: #5ee616;
+    margin-bottom: 1rem;
+    font-family: "BeldgoRegular", sans-serif;
+  }
+  
+  .settingGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .metadataPreview,
+  .tokenSetup,
+  .otherSettingsPreview {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .metadataPreview h3,
+  .tokenSetup h3,
+  .otherSettingsPreview h3 {
+    color: #5ee616;
+    margin-bottom: 1rem;
+    font-family: "BeldgoRegular", sans-serif;
+  }
+  
+  .metadataPreview h4 {
+    color: #15b8a3;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: "BeldgoRegular", sans-serif;
+  }
+  
+  .metadataSection {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .metadataSection:first-of-type {
+    margin-top: 1rem;
+  }
+  
+  .metadataPreview p,
+  .tokenSetup p,
+  .otherSettingsPreview p,
+  .metadataPreview div,
+  .tokenSetup div,
+  .otherSettingsPreview div,
+  .metadataPreview ul,
+  .tokenSetup ul,
+  .otherSettingsPreview ul,
+  .metadataPreview li,
+  .tokenSetup li,
+  .otherSettingsPreview li {
+    font-family: Arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .imageContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .imageContainer img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .networkSelector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .networkSelector label {
+    margin-right: 1rem;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .networkSelect {
+    flex: 1;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+    cursor: pointer;
+  }
+  
+  .networkSelect:focus {
+    outline: none;
+    border-color: #5ee616;
+    box-shadow: 0 0 10px rgba(94, 230, 22, 0.5);
+  }
+  
+  .networkSelect.devnet {
+    background-color: rgba(94, 230, 22, 0.2);
+    border-color: #5ee616;
+  }
+  
+  .networkSelect.mainnet-beta {
+    background-color: rgba(21, 184, 163, 0.2);
+    border-color: #15b8a3;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .formContainer,
+    .previewContainer,
+    .createdTokenContainer {
+      width: 100%;
+    }
+  }

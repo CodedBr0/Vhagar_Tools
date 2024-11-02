@@ -1,0 +1,106 @@
+.footer {
+  background-color: #1e2230;
+  color: white;
+  position: relative;
+  width: 100%;
+  padding-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.coCont {
+  margin-right: 35px;
+}
+
+.containerr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 100%;
+  margin: 10px 30px;
+  padding: auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  width: 20%;
+  padding: 0 0;
+  min-width: 0;
+}
+
+.opp {
+  padding: 0;
+  margin: 0;
+}
+
+.column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #5ee616;
+  letter-spacing: 0.03em;
+}
+
+.footerDivider {
+  height: 0.5px;
+  background: #5ee616;
+  margin-top: 40px;
+}
+
+.column a:hover,
+.column.coServe a:hover {
+  color: #5ee616;
+  transition: color 0.3s ease;
+}
+
+.socialIcon {
+  transition: filter 0.3s ease;
+}
+
+.socialIcon:hover {
+  filter: drop-shadow(0 0 10px #5ee616);
+}
+
+.logoIconLink {
+  display: block;
+}
+
+.logoIcon {
+  width: 220px;
+  height: 210px;
+}
+
+.logoWordLink {
+  display: block;
+}
+
+.logoWord {
+  width: 160px;
+  height: 80px;
+}
+
+@media screen and (max-width: 855px) {
+  .logoIcon {
+    width: 190px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .column {
+    width: 100%;
+    padding: 0 0;
+    min-width: 0;
+  }
+
+  .first {
+    display: none;
+  }
+
+  .logoIconLink {
+    display: none;
+  }
+}

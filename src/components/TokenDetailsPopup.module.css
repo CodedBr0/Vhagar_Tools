@@ -1,0 +1,62 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #1e2230;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(94, 230, 22, 0.5);
+}
+
+.title {
+  color: #5ee616;
+  margin-bottom: 1rem;
+  font-family: "BeldgoRegular", sans-serif;
+}
+
+.content {
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  font-family: Arial, sans-serif;
+}
+
+.content p, .content li {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.closeButton {
+  background-color: #5ee616;
+  color: #1e2230;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: "BeldgoRegular", sans-serif;
+}
+
+.closeButton:hover {
+  background-color: #4cc313;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(94, 230, 22, 0.3);
+}
+
+.closeButton:active {
+  transform: translateY(1px);
+}

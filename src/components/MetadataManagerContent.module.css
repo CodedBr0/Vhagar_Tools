@@ -1,0 +1,77 @@
+.managerContainer {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(94, 230, 22, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(94, 230, 22, 0.1);
+  }
+  
+  .inputSection {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .addressInput {
+    flex: 2;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid rgba(94, 230, 22, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .fetchButton {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 5px;
+    background: linear-gradient(to right, #5ee616, #15b8a3);
+    color: #050c24;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .fetchButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(94, 230, 22, 0.4);
+  }
+  
+  .metadataDisplay {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .metadataDisplay h2 {
+    color: #5ee616;
+    margin-bottom: 1rem;
+  }
+  
+  .metadataDisplay p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tokenImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .inputSection {
+      flex-direction: column;
+    }
+  
+    .addressInput,
+    .fetchButton {
+      width: 100%;
+    }
+  }
